@@ -1,6 +1,6 @@
 # EasyOk
 
-**EasyOk是基于Okhttp一个轻量级的HttpClient**
+**EasyOk是基于Okhttp一个轻量级的网络请求辅助类**
 
 
 
@@ -10,7 +10,9 @@ EasyOk可以用不到Okhttp50%的代码量实现通常的 GET , POST , 下载请
 并且EasyOk可以把添加请求头，设置代理等繁琐复杂的工作通过几行代码解决  
 由于基于Okhttp，所以性能强大(站在巨人的肩膀上)  
 
-
+## 使用EasyOk  
+由于基于Okhttp，所以需要事先导入Okhttp-3.2.0.jar和okio-1.13.0.jar  
+所以总共需要导入Okhttp-3.2.0.jar和okio-1.13.0.jar以及EasyOk.jar三个包  
 
 
 
