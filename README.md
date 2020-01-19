@@ -6,16 +6,16 @@
 
 
 
-EasyOk可以用不到Okhttp50%的代码量实现通常的 GET , POST , 下载请求
-并且EasyOk可以把添加请求头，设置代理等繁琐复杂的工作通过几行代码解决
-由于基于Okhttp，所以性能强大(站在巨人的肩膀上)
+EasyOk可以用不到Okhttp50%的代码量实现通常的 GET , POST , 下载请求  
+并且EasyOk可以把添加请求头，设置代理等繁琐复杂的工作通过几行代码解决  
+由于基于Okhttp，所以性能强大(站在巨人的肩膀上)  
 
 
 
 
 
-EasyOk源于Square公司的Okhttp开源项目，[👉开源地址👈](https://github.com/square/okhttp")，并在MIT开源协议的许可范围内将代码进行包装，将实现代码进行精简，以适应广大用户群体的需求。
-再一次向优秀的HttpClient原作者Square以及Okhttp致敬。
+EasyOk源于Square公司的Okhttp开源项目，[👉开源地址👈](https://github.com/square/okhttp")，并在MIT开源协议的许可范围内将代码进行包装，将实现代码进行精简，以适应广大用户群体的需求。  
+再一次向优秀的HttpClient原作者Square以及Okhttp致敬。  
 
 
 ![Pandao editor.md](https://avatars0.githubusercontent.com/u/82592?s=100&v=1")
