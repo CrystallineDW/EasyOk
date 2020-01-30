@@ -26,9 +26,9 @@ import okhttp3.Request;
 import okhttp3.Request.Builder;
 import okhttp3.Response;
 
-public class EasyOk¹ÜÀíÆ÷ {
+public class EasyOkç®¡ç†å™¨ {
 
-	OkHttpClient Client¶ÔÏó;
+	public OkHttpClient Clientå¯¹è±¡;
 
 	OkHttpClient.Builder builder;
 
@@ -37,130 +37,130 @@ public class EasyOk¹ÜÀíÆ÷ {
 	// Header_List
 	Map<String, String> Header;
 
-	public EasyOk¹ÜÀíÆ÷() {
-		Client¶ÔÏó = new OkHttpClient();
-		builder = Client¶ÔÏó.newBuilder();
+	public EasyOkç®¡ç†å™¨() {
+		Clientå¯¹è±¡ = new OkHttpClient();
+		builder = Clientå¯¹è±¡.newBuilder();
 	}
 
-	// HeaderÌí¼Ó·½·¨
-	public void Ìí¼ÓÍ·(String Í·Ãû³Æ, String Í·ÄÚÈİ) {
+	// Headeræ·»åŠ æ–¹æ³•
+	public void æ·»åŠ å¤´(String å¤´åç§°, String å¤´å†…å®¹) {
 		Header = new HashMap<>();
-		Header.put(Í·Ãû³Æ + "", Í·ÄÚÈİ + "");
+		Header.put(å¤´åç§° + "", å¤´å†…å®¹ + "");
 	}
 
 	/*
-	 * ÏÂÃæÊÇÆäËûĞÅÏ¢µÄÌí¼Ó·½·¨
+	 * ä¸‹é¢æ˜¯å…¶ä»–ä¿¡æ¯çš„æ·»åŠ æ–¹æ³•
 	 */
-	public void ÉèÖÃÁ¬½Ó³¬Ê±Ê±¼ä(long Ê±¼äÊı×Ö, String Ê±¼ä³ß¶È) {
-		switch (Ê±¼ä³ß¶È) {
+	public void è®¾ç½®è¿æ¥è¶…æ—¶æ—¶é—´(long æ—¶é—´æ•°å­—, String æ—¶é—´å°ºåº¦) {
+		switch (æ—¶é—´å°ºåº¦) {
 
-		case "Ìì": {
-			builder.connectTimeout(Ê±¼äÊı×Ö, TimeUnit.DAYS);
+		case "å¤©": {
+			builder.connectTimeout(æ—¶é—´æ•°å­—, TimeUnit.DAYS);
 			break;
 		}
-		case "Ğ¡Ê±": {
-			builder.connectTimeout(Ê±¼äÊı×Ö, TimeUnit.HOURS);
+		case "å°æ—¶": {
+			builder.connectTimeout(æ—¶é—´æ•°å­—, TimeUnit.HOURS);
 			break;
 		}
-		case "·ÖÖÓ": {
-			builder.connectTimeout(Ê±¼äÊı×Ö, TimeUnit.MINUTES);
+		case "åˆ†é’Ÿ": {
+			builder.connectTimeout(æ—¶é—´æ•°å­—, TimeUnit.MINUTES);
 			break;
 		}
-		case "Ãë": {
-			builder.connectTimeout(Ê±¼äÊı×Ö, TimeUnit.SECONDS);
+		case "ç§’": {
+			builder.connectTimeout(æ—¶é—´æ•°å­—, TimeUnit.SECONDS);
 			break;
 		}
-		case "ºÁÃë": {
-			builder.connectTimeout(Ê±¼äÊı×Ö, TimeUnit.MILLISECONDS);
+		case "æ¯«ç§’": {
+			builder.connectTimeout(æ—¶é—´æ•°å­—, TimeUnit.MILLISECONDS);
 			break;
 		}
 		default: {
-			builder.connectTimeout(Ê±¼äÊı×Ö, TimeUnit.SECONDS);
+			builder.connectTimeout(æ—¶é—´æ•°å­—, TimeUnit.SECONDS);
 		}
 		}
 	}
 
-	public void ÉèÖÃÄ¬ÈÏ¶ÁÊ±¼ä(long Ê±¼äÊı×Ö, String Ê±¼ä³ß¶È) {
-		switch (Ê±¼ä³ß¶È) {
+	public void è®¾ç½®é»˜è®¤è¯»æ—¶é—´(long æ—¶é—´æ•°å­—, String æ—¶é—´å°ºåº¦) {
+		switch (æ—¶é—´å°ºåº¦) {
 
-		case "Ìì": {
-			builder.readTimeout(Ê±¼äÊı×Ö, TimeUnit.DAYS);
+		case "å¤©": {
+			builder.readTimeout(æ—¶é—´æ•°å­—, TimeUnit.DAYS);
 			break;
 		}
-		case "Ğ¡Ê±": {
-			builder.readTimeout(Ê±¼äÊı×Ö, TimeUnit.HOURS);
+		case "å°æ—¶": {
+			builder.readTimeout(æ—¶é—´æ•°å­—, TimeUnit.HOURS);
 			break;
 		}
-		case "·ÖÖÓ": {
-			builder.readTimeout(Ê±¼äÊı×Ö, TimeUnit.MINUTES);
+		case "åˆ†é’Ÿ": {
+			builder.readTimeout(æ—¶é—´æ•°å­—, TimeUnit.MINUTES);
 			break;
 		}
-		case "Ãë": {
-			builder.readTimeout(Ê±¼äÊı×Ö, TimeUnit.SECONDS);
+		case "ç§’": {
+			builder.readTimeout(æ—¶é—´æ•°å­—, TimeUnit.SECONDS);
 			break;
 		}
-		case "ºÁÃë": {
-			builder.readTimeout(Ê±¼äÊı×Ö, TimeUnit.MILLISECONDS);
+		case "æ¯«ç§’": {
+			builder.readTimeout(æ—¶é—´æ•°å­—, TimeUnit.MILLISECONDS);
 			break;
 		}
 		default: {
-			builder.readTimeout(Ê±¼äÊı×Ö, TimeUnit.SECONDS);
-		}
-		}
-
-	}
-
-	public void ÉèÖÃÄ¬ÈÏĞ´Ê±¼ä(long Ê±¼äÊı×Ö, String Ê±¼ä³ß¶È) {
-		switch (Ê±¼ä³ß¶È) {
-
-		case "Ìì": {
-			builder.writeTimeout(Ê±¼äÊı×Ö, TimeUnit.DAYS);
-			break;
-		}
-		case "Ğ¡Ê±": {
-			builder.writeTimeout(Ê±¼äÊı×Ö, TimeUnit.HOURS);
-			break;
-		}
-		case "·ÖÖÓ": {
-			builder.writeTimeout(Ê±¼äÊı×Ö, TimeUnit.MINUTES);
-			break;
-		}
-		case "Ãë": {
-			builder.writeTimeout(Ê±¼äÊı×Ö, TimeUnit.SECONDS);
-			break;
-		}
-		case "ºÁÃë": {
-			builder.writeTimeout(Ê±¼äÊı×Ö, TimeUnit.MILLISECONDS);
-			break;
-		}
-		default: {
-			builder.writeTimeout(Ê±¼äÊı×Ö, TimeUnit.SECONDS);
+			builder.readTimeout(æ—¶é—´æ•°å­—, TimeUnit.SECONDS);
 		}
 		}
 
 	}
 
-	public void ÉèÖÃ´úÀí(Proxy proxy) {
+	public void è®¾ç½®é»˜è®¤å†™æ—¶é—´(long æ—¶é—´æ•°å­—, String æ—¶é—´å°ºåº¦) {
+		switch (æ—¶é—´å°ºåº¦) {
+
+		case "å¤©": {
+			builder.writeTimeout(æ—¶é—´æ•°å­—, TimeUnit.DAYS);
+			break;
+		}
+		case "å°æ—¶": {
+			builder.writeTimeout(æ—¶é—´æ•°å­—, TimeUnit.HOURS);
+			break;
+		}
+		case "åˆ†é’Ÿ": {
+			builder.writeTimeout(æ—¶é—´æ•°å­—, TimeUnit.MINUTES);
+			break;
+		}
+		case "ç§’": {
+			builder.writeTimeout(æ—¶é—´æ•°å­—, TimeUnit.SECONDS);
+			break;
+		}
+		case "æ¯«ç§’": {
+			builder.writeTimeout(æ—¶é—´æ•°å­—, TimeUnit.MILLISECONDS);
+			break;
+		}
+		default: {
+			builder.writeTimeout(æ—¶é—´æ•°å­—, TimeUnit.SECONDS);
+		}
+		}
+
+	}
+
+	public void è®¾ç½®ä»£ç†(Proxy proxy) {
 		builder.proxy(proxy);
 
 	}
 
-	public void ÉèÖÃ´úÀíÑ¡ÔñÆ÷(ProxySelector proxySelector) {
+	public void è®¾ç½®ä»£ç†é€‰æ‹©å™¨(ProxySelector proxySelector) {
 		builder.proxySelector(proxySelector);
 
 	}
 
-	public void ÉèÖÃ´¦ÀícookiesµÄ´¦ÀíÕß_cookieJar(CookieJar cookieJar) {
+	public void è®¾ç½®å¤„ç†cookiesçš„å¤„ç†è€…_cookieJar(CookieJar cookieJar) {
 		builder.cookieJar(cookieJar);
 
 	}
 
-	public void ÉèÖÃ»º´æ(Cache cache) {
+	public void è®¾ç½®ç¼“å­˜(Cache cache) {
 		builder.cache(cache);
 
 	}
 
-	public void ÉèÖÃDNS·şÎñ(Dns dns) {
+	public void è®¾ç½®DNSæœåŠ¡(Dns dns) {
 		builder.dns(dns);
 
 	}
@@ -195,7 +195,7 @@ public class EasyOk¹ÜÀíÆ÷ {
 
 	}
 
-	public void ÉèÖÃÁ¬½Ó³Ø(ConnectionPool connectionPool) {
+	public void è®¾ç½®è¿æ¥æ± (ConnectionPool connectionPool) {
 		builder.connectionPool(connectionPool);
 
 	}
@@ -210,12 +210,12 @@ public class EasyOk¹ÜÀíÆ÷ {
 
 	}
 
-	public void Á¬½ÓÊ§°ÜÊÇ·ñÖØÁ¬(boolean retryOnConnectionFailure) {
+	public void è¿æ¥å¤±è´¥æ˜¯å¦é‡è¿(boolean retryOnConnectionFailure) {
 		builder.retryOnConnectionFailure(retryOnConnectionFailure);
 
 	}
 
-	public void ÉèÖÃĞ­Òé(List<Protocol> protocols) {
+	public void è®¾ç½®åè®®(List<Protocol> protocols) {
 		builder.protocols(protocols);
 
 	}
@@ -225,10 +225,10 @@ public class EasyOk¹ÜÀíÆ÷ {
 
 	}
 
-	public void ´´½¨() {
-		// ÅĞ¶ÏÊÇ·ñ¼ÓÈëÁËÇëÇóÍ·
+	public void åˆ›å»º() {
+		// åˆ¤æ–­æ˜¯å¦åŠ å…¥äº†è¯·æ±‚å¤´
 		if (Header != null) {
-			// ¼ÓÈëÁËÇëÇóÍ·
+			// åŠ å…¥äº†è¯·æ±‚å¤´
 			builder.addInterceptor(new Interceptor() {
 
 				@Override
@@ -244,7 +244,7 @@ public class EasyOk¹ÜÀíÆ÷ {
 				}
 			});
 		}
-		Client¶ÔÏó = builder.build();
+		Clientå¯¹è±¡ = builder.build();
 
 	}
 }
