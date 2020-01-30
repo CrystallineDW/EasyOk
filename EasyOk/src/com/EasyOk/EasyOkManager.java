@@ -35,7 +35,7 @@ import okhttp3.Interceptor.Chain;
 
 public class EasyOkManager{
 	
-	OkHttpClient Client;
+	public OkHttpClient Client;
 	
 	OkHttpClient.Builder builder;
 	
@@ -50,7 +50,7 @@ public class EasyOkManager{
 		builder = Client.newBuilder();
 	}
 	
-	//Header添加方法
+	//Header娣诲姞鏂规硶
 	public void addHeader(String Key,String Value)
 	{
 		Header =new HashMap<>();
@@ -58,7 +58,7 @@ public class EasyOkManager{
 	}
 	
 	/*
-	 * 下面是其他信息的添加方法
+	 * 涓嬮潰鏄叾浠栦俊鎭殑娣诲姞鏂规硶
 	 */
 	public void connectTimeout(long timeout,String timesize)
 	{
@@ -276,10 +276,10 @@ public class EasyOkManager{
 	
 	public void ClientBuild()
 	{
-		//判断是否加入了请求头
+		//鍒ゆ柇鏄惁鍔犲叆浜嗚姹傚ご
 		if(Header!=null)
 		{
-			//加入了请求头
+			//鍔犲叆浜嗚姹傚ご
 			for(Map.Entry<String, String> entry : Header.entrySet()){
         	    String mapKey = entry.getKey();
         	    String mapValue = entry.getValue();
